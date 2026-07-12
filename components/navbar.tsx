@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -13,10 +14,15 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-white font-serif text-xl font-bold">A</span>
-            </div>
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <Image 
+              src="/images/logo.png" 
+              alt="Atella Beach Resort Logo" 
+              width={40} 
+              height={40} 
+              className="rounded-lg"
+              priority
+            />
             <div>
               <div className="font-serif text-xl font-bold tracking-tight">Attela</div>
               <div className="text-[10px] text-muted-foreground -mt-1">BEACH RESORT</div>

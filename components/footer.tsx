@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,9 +9,13 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-white font-serif text-xl font-bold">A</span>
-              </div>
+              <Image 
+                src="/images/logo.png" 
+                alt="Attela Beach Resort Logo" 
+                width={40} 
+                height={40} 
+                className="rounded-lg"
+              />
               <div className="font-serif text-2xl font-bold text-white tracking-tight">Attela Beach Resort</div>
             </div>
             <p className="max-w-md text-white/70 leading-relaxed">
